@@ -1,4 +1,4 @@
-// this function update height of footer image depends on document height changes
+// this function update the img footer height if the document change it's height
 function updateFooterImg() {
   documentHeight = $(document).height();
   var footerImage = jQuery("#footer_image");
@@ -6,8 +6,8 @@ function updateFooterImg() {
   // get the height for the footer image minus the header image and the marging top
   var height = documentHeight-750-510
 
+  // img footer height no more than 2000
   if (height<2000){
-  console.log(height)
     $(footerImage).css( { "height" : height} );
   }else{
     $(footerImage).css( { "height" : 2000} );
