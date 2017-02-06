@@ -6,9 +6,12 @@
 .twitter_status,
 .twitter_text,
 .intro_message .message_container p{
-  font-family: callunaregular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-style: italic;
   font-size: 1em;
+}
+.social_heading, h2, button{
+  font-family: sans-serif;
 }
 
 /* Global
@@ -34,14 +37,14 @@ img {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  }
+}
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Header image */
 #header_image{
-  height: 750px;
+  height: 800px;
   width: 100%;
 }
 
@@ -49,8 +52,8 @@ img {
 #logo {
   display: block;
   margin: 0 auto 80px;
-  width: 40%;
-  height: 40%;
+  width: 30%;
+  height: 30%;
 }
 
 /*Nav bar*/
@@ -87,7 +90,12 @@ nav a#pull {
 }
 
 .border_bottom{
+  border-radius:
   margin-bottom: 70px;
+}
+.nav_border{
+  height: 3px;
+  background: white;
 }
 
 @media only screen and (max-width : 960px) {
@@ -132,8 +140,31 @@ nav a#pull {
     width: 30%;
     height: 30%;
   }
+  .social_icons{
+    display: none
+  }
 }
+.social_icons{
+  position: relative;
+  top: 50%;
+  left: 38%;
 
+}
+.fa {
+color: white;
+padding: 1.5%;
+width:15px; /** fix width ***/
+text-align: center;
+display: inline;
+border-radius: 25px 25px 25px 25px;
+border: 2px solid white;
+margin: 35px 15px 80px 15px;
+}
+@media only screen and (max-width: 450px){
+ .social_icons{
+    display: none;
+  }
+}
 /* Content Block  (Intro Text)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .intro_message{
@@ -287,6 +318,7 @@ nav a#pull {
   .twitter_contact_container,
   .instagram_contact_container{
     width: 100%;
+    margin-top: 50px;
     margin-right: 0;
     height: 350px;
     float: left;
@@ -404,7 +436,7 @@ footer ul li{
   color: #ffffff;
 }
 .footer_icons{
-  margin: 1px 0 0 ;
+  margin: 1px 0 0;
   display: block;
   float: left;
 }
@@ -453,4 +485,20 @@ footer ul li:first-child{
   left: 0;
   width: 100%;
   margin-top: 510px;
+}
+input{
+  color: white;
+}
+
+@media only screen 
+  and (min-device-width: 1024px) {
+    #footer_image {
+      position: relative;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin-top: 510px;
+      height: 680px;
+    }
 }

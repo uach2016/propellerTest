@@ -1,10 +1,10 @@
 // this function update the img footer height if the document change it's height
 function updateFooterImg() {
   documentHeight = $(document).height();
-  var footerImage = jQuery("#footer_image");
+  footerImage = jQuery("#footer_image");
 
   // get the height for the footer image minus the header image and the marging top
-  var height = documentHeight-750-510
+  height = documentHeight-750-510
 
   // img footer height no more than 2000
   if (height<2000){
@@ -13,7 +13,6 @@ function updateFooterImg() {
     $(footerImage).css( { "height" : 2000} );
   }
 }
-
 $(document).ready(function(){
 
   $( window ).resize(function() {
@@ -35,12 +34,9 @@ $(document).ready(function(){
     e.preventDefault();
     $('nav ul').slideDown( "slow" );
     $('#logo').hide();
-
-    // if click on one of the options hide the nav list and show logo
-    $('nav li a').click(function(){
-      $('nav ul').hide();
-      $('#logo').show();
-    });
+    // update the height and margin after slideDown the menu
+    $(footerImage).css( { "margin-top" : "250px" } );
+    $(footerImage).css( { "height" : height+40 } );
   });
 
   updateFooterImg();
